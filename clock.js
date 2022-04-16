@@ -52,10 +52,10 @@ $(".openbtn1").click(function () {//ボタンがクリックされたら
 
 
 //背景色の変更
-// HTMLタグに「theme」属性を追加。valueに「DARK」をいれる
+// HTMLタグに「theme」属性を追加。valueに「BLUE」をいれる
 document.documentElement.setAttribute('theme', 'BLUE');
 
-// 「DARK」テーマに切り替わるよ
+// 「BLUE」テーマに切り替わるよ
 function changeBlue() {
   document.documentElement.setAttribute('theme', 'BLUE');
 }
@@ -74,3 +74,16 @@ function changePink() {
 function changeYellow() {
   document.documentElement.setAttribute('theme', 'YELLOW');
 }
+
+window.addEventListener('load', function(){
+			
+    // フルスクリーン表示
+    document.getElementById('gg-maximize-alt').addEventListener('click', function(){
+        document.body.requestFullscreen();				
+    });
+
+    // // フルスクリーン解除
+    // document.getElementById('button2').addEventListener('click', function(){
+    //     document.exitFullscreen();
+    // });
+});

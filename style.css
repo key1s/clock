@@ -6,7 +6,15 @@
 
 body {
     margin: 0;
-}
+    overflow-y: scroll;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+    user-select: none;
+    }
+
+    body::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+      display:none;
+    }
 
 .container {
   width: 100%;
@@ -19,6 +27,7 @@ body {
   text-align: center;
   flex-flow: column;
 }
+
 
 /* 時計の共通スタイル */
 .clock {
@@ -206,6 +215,7 @@ opacity: 1;
 .circle-bg {
     opacity: 0.98;
 }
+  
 
 /* 背景色の変更 */
 :root,
@@ -225,17 +235,6 @@ opacity: 1;
   --color-container: #f8f7b8;
 }
 
-/* .container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: calc(100% - 100px);
-  padding: 30px;
-  background: var(--color-container);
-} */
-
 .button-container {
   display: flex;
   align-items: center;
@@ -247,20 +246,85 @@ opacity: 1;
   bottom: 30px;
 }
 
+
 .button {
   position: relative;
   display: inline-block;
   margin: 1vw;
   padding: 10px 0;  
-  border-radius: 20px;
-  font-size: 12px;
-  font-size: 18px;
-  font-weight: 900;
-  text-align: center;
   cursor: pointer;
+  border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  opacity: 0.7;
+}
+
+.button:hover {
+    opacity: 1.0;
 }
 
 * {
     transition: all 0.5s;
     box-sizing: border-box;
   }
+
+#full:not(:fullscreen) {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+}
+
+/* #full:fullscreen {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    cursor: pointer;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+} */
+
+/* icon */
+
+#gg-maximize-alt {
+    box-sizing: border-box;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: block;
+    transform: scale(var(--ggs,1));
+    cursor: pointer;;
+    color: #666;
+    width: 14px;
+    height: 14px;
+    margin: 10px;
+    box-shadow:
+    -6px -6px 0 -4px,
+    6px 6px 0 -4px,
+    6px -6px 0 -4px,
+    -6px 6px 0 -4px
+   }
+   
+   #gg-maximize-alt::after,
+   #gg-maximize-alt::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 22px;
+    height: 2px;
+    border-left: 8px solid;
+    border-right: 8px solid;
+    transform: rotate(-45deg);
+    bottom: 6px;
+    left: -4px
+   }
+   
+   #gg-maximize-alt::before {
+    transform: rotate(45deg)
+   } 
