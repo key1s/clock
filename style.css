@@ -1,5 +1,6 @@
 /* Google Fonts 読み込み */
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 
 /* 全体を囲うコンテナー */
 
@@ -10,18 +11,20 @@ body {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #15151e;
+  /* background-color: #15151e; */
+  background: var(--color-container);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-flow: column;
 }
 
 /* 時計の共通スタイル */
 .clock {
   font-family: 'Share Tech Mono', monospace;
   color: #f0fbff;
-  /* text-shadow: 0 0 20px #0aafe6; */
+  text-shadow: 0 0 5px #5c6669;
   line-height: 1.2;
   text-align: center;
 }
@@ -203,3 +206,61 @@ opacity: 1;
 .circle-bg {
     opacity: 0.98;
 }
+
+/* 背景色の変更 */
+:root,
+:root[theme='BLUE'] {
+  --color-container: #37474F;
+}
+
+:root[theme='GREEN'] {
+  --color-container: #ACA;
+}
+
+:root[theme='PINK'] {
+  --color-container: #ebbddb;
+}
+
+:root[theme='YELLOW'] {
+  --color-container: #f8f7b8;
+}
+
+/* .container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 30px;
+  background: var(--color-container);
+} */
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 30px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 1vw;
+  padding: 10px 0;  
+  border-radius: 20px;
+  font-size: 12px;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+}
+
+* {
+    transition: all 0.5s;
+    box-sizing: border-box;
+  }

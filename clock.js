@@ -49,3 +49,28 @@ $(".openbtn1").click(function () {//ボタンがクリックされたら
       $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去
       $(".circle-bg").removeClass('circleactive');//丸背景のcircleactiveクラスを除去
   });
+
+
+//背景色の変更
+// HTMLタグに「theme」属性を追加。valueに「DARK」をいれる
+document.documentElement.setAttribute('theme', 'BLUE');
+
+// 「DARK」テーマに切り替わるよ
+function changeBlue() {
+  document.documentElement.setAttribute('theme', 'BLUE');
+}
+
+// 「GREEN」テーマに切り替わるよ
+function changeGreen() {
+  document.documentElement.setAttribute('theme', 'GREEN');
+}
+
+// 「PINK」テーマに切り替わるよ
+function changePink() {
+  document.documentElement.setAttribute('theme', 'PINK');
+}
+
+// 「YELLOW」テーマに切り替わるよ
+function changeYellow() {
+  document.documentElement.setAttribute('theme', 'YELLOW');
+}
