@@ -5,46 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Clock</title>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- CSSファイル読み込み -->
+  <link rel="stylesheet" href="style.css">
   <!-- メニュー独自CSSの読み込み -->
   <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
   <link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/5-1-21/css/5-1-21.css">
-  <!-- CSSファイル読み込み -->
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container otherPage">
 
-      <div class="openbtn1"><span></span><span></span><span></span></div>
+        <div class="openbtn1"><span></span><span></span><span></span></div>
         <nav id="g-nav">
         <ul>
-          <li><a href="#">TOP</a></li>  
+          <li><a href="index.html">TOP</a></li>  
         <li><a href="about.html">About</a></li>  
         <li><a href="service.html">Service</a></li>  
         <li><a href="contact.html">Contact</a></li>  
         </ul>
         </nav>
         <div class="circle-bg"></div>
-
-    <div id="clockContainar">
-      <div class="clock">
-        <p class="clock-date"></p>
-        <p class="clock-time"></p>
-      </div> 
+        <div class="description pageText">
+            <h1>他になんかないんか？</h1>
+        <p>気まぐれで作ります。要望があれば作ってみたりもしたいです。</p>
     </div>
 
-    <div class="button-container">
-        <div class="button" style="background-color: #37474F;" onclick="changeBlue()"></div>
-        <div class="button" style="background-color: #ACA;" onclick="changeGreen()"></div>
-        <div class="button" style="background-color: #ebbddb;" onclick="changePink()"></div>
-        <div class="button" style="background-color: #f8f7b8;" onclick="changeYellow()"></div>
-    </div>
-
-    <i id="gg-maximize-alt"></i>
-
-
-
-  <!-- JavaScriptファイル読み込み -->
+      <!-- JavaScriptファイル読み込み -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="clock.js"></script>
+    
 </body>
 </html>

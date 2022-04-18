@@ -59,17 +59,14 @@ document.documentElement.setAttribute('theme', 'BLUE');
 function changeBlue() {
   document.documentElement.setAttribute('theme', 'BLUE');
 }
-
 // 「GREEN」テーマに切り替わるよ
 function changeGreen() {
   document.documentElement.setAttribute('theme', 'GREEN');
 }
-
 // 「PINK」テーマに切り替わるよ
 function changePink() {
   document.documentElement.setAttribute('theme', 'PINK');
 }
-
 // 「YELLOW」テーマに切り替わるよ
 function changeYellow() {
   document.documentElement.setAttribute('theme', 'YELLOW');
@@ -79,7 +76,8 @@ window.addEventListener('load', function(){
 			
     // フルスクリーン表示
     document.getElementById('gg-maximize-alt').addEventListener('click', function(){
-        document.body.requestFullscreen();				
+        document.getElementById("clockContainar").requestFullscreen();
+        				
     });
 
     // // フルスクリーン解除
